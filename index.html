@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="index.js"></script>
+<link rel="stylesheet" href="index.css" />
+<title>Rock paper scissor</title>
+</head>
+
+<body>
+<div class="container">
+    <h1>Rock Paper Scissor game</h1>
+    
+    <h2 class="js-result">
+    </h2>
+
+    <div class="moves">
+        <h2 class="js-moves moves1"></h2>
+    </div>
+
+
+    <h2 class="js-score"></h2>
+
+    <div class="button">
+    <button onclick="playGame('rock'); ">
+    <img src="rock.png"></button>
+
+    <button onclick="playGame('paper')">
+    <img src="paper.png"></button>
+
+    <button onclick="playGame('scissors') ">
+    <img src="scissors.png"></button>
+
+    <button onclick="
+    score.wins = 0;
+    score.losses = 0;
+    score.ties = 0;
+    localStorage.removeItem('score');
+    document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
+
+    "> Reset Score</button>
+
+    <button onclick="autoPlay();"> Auto Play</button>
+
+    </div>
+
+    <div class="score">
+
+    </div>
+
+</div>
+</body>
+</html>
